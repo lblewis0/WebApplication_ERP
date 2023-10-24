@@ -1,0 +1,22 @@
+h3
+{
+    color: green;
+}
+
+#contacts-table
+{
+    border: 1px solid grey;
+    border-radius: 5px 5px 5px 5px;
+}
+
+td
+{
+    border: 1px solid grey;
+    width: 50px;
+}
+
+th 
+{
+    border: 1px solid grey;
+    width: 50px;
+}
