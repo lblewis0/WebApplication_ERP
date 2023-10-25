@@ -1,22 +1,270 @@
+/*root{
+    --taillecol1: 10rem;
+    --taillecol2 20rem;
+}*/
 h3
 {
-    color: green;
+    font-size: 16px;
 }
 
-#contacts-table
+.main-div
 {
     border: 1px solid grey;
-    border-radius: 5px 5px 5px 5px;
 }
 
-td
+.contacts-div
 {
     border: 1px solid grey;
-    width: 50px;
+    padding: 15px;/*
+    display: flex;
+    flex-direction: column;*/
+}
+
+.organisations-div 
+{
+    border: 1px solid grey;
+    padding: 15px;/*
+    display: flex;
+    flex-direction: column;*/
+   
+}
+
+/** CONTACTS **/
+
+#contacts-table 
+{
+    border: 1px solid grey;
+    border-collapse: collapse;
+    border-radius: 10px;
+    font-size: 10px;
+}
+
+td {
+    border: 1px solid grey;
+    height: 20px;
 }
 
 th 
 {
+    color: white;
+    background-color: blue;
+}
+
+.contacts-table-th 
+{
     border: 1px solid grey;
-    width: 50px;
+    height: 20px;
+}
+
+#contacts-table-th1 
+{ 
+    width: 30px;
+    min-width: 30px;
+    max-width: 30px;
+}
+
+#contacts-table-th2 {
+    width: 80px;
+    min-width: 80px;
+    max-width: 80px;
+}
+
+#contacts-table-th3 {
+    width: 80px;
+    min-width: 80px;
+    max-width: 80px;
+}
+
+#contacts-table-th4 {
+    width: 90px;
+    min-width: 90px;
+    max-width: 90px;
+}
+
+#contacts-table-th5 {
+    width: 90px;
+    min-width: 90px;
+    max-width: 90px;
+}
+
+#contacts-table-th6 {
+    width: 180px;
+    min-width: 180px;
+    max-width: 180px;
+}
+
+#contacts-table-th7 {
+    width: 180px;
+    min-width: 180px;
+    max-width: 180px;
+}
+
+#contacts-table-th8 {
+    width: 60px;
+    min-width: 60px;
+    max-width: 60px;
+}
+
+#contacts-table-th9 {
+    width: 60px;
+    min-width: 60px;
+    max-width: 60px;
+}
+
+#contacts-table-th10 {
+    width: 60px;
+    min-width: 60px;
+    max-width: 60px;
+}
+
+/** ORGANISATION **/
+#organisation-table 
+{
+    border: 1px solid grey;
+    border-collapse: collapse;
+    border-radius: 10px;
+    font-size: 10px;
+}
+
+.organisation-table-th 
+{
+    border: 1px solid grey;
+    height: 20px;
+}
+
+#organisation-table-th1 {
+    width: 30px;
+    min-width: 30px;
+    max-width: 30px;
+}
+
+#organisation-table-th2 {
+    width: 100px;
+    min-width: 100px;
+    max-width: 100px;
+}
+
+#organisation-table-th3 {
+    width: 180px;
+    min-width: 180px;
+    max-width: 180px;
+}
+
+#organisation-table-th4 {
+    width: 60px;
+    min-width: 60px;
+    max-width: 60px;
+}
+
+#organisation-table-th5 {
+    width: 60px;
+    min-width: 60px;
+    max-width: 60px;
+}
+
+#organisation-table-th6 {
+    width: 100px;
+    min-width: 100px;
+    max-width: 100px;
+}
+
+#organisation-table-th7 {
+    width: 60px;
+    min-width: 60px;
+    max-width: 60px;
+    
+}
+
+/** BUTTONS **/
+.contacts-table-buttons-td-div 
+{
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: space-between;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.organisations-table-buttons-td-div 
+{
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: space-between;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.modify-button 
+{
+    background: yellow;
+    cursor: pointer;
+    padding: 0px;
+    border-radius: 3px 3px 3px 3px;
+    border: 0.5px solid grey;
+}
+
+.delete-button 
+{
+    background: red;
+    cursor: pointer;
+    padding: 0px;
+    border-radius: 3px 3px 3px 3px;
+    border: 0.5px solid grey;
+}
+
+.modify-logo
+{
+    fill: white;
+    padding: 0px;
+}
+
+.delete-logo 
+{
+    fill: white;
+    padding: 0px;
+}
+
+.right-button-div 
+{
+    /*display: flex;
+    justify-content: flex-end;*/
+    padding-top: 5px;
+    font-size: 12px;
+    background-color: red;
+}
+
+#right-button-div-organisation 
+{
+    /*border: 1px solid grey;*/
+
+}
+
+#right-button-div-contact
+{
+    /*border: 1px solid grey;*/
+}
+
+.add-button 
+{
+    background: green;
+    cursor: pointer;
+    padding: 0px;
+    border-radius: 3px 3px 3px 3px;
+    border: 0.5px solid grey;
+    color: white;
+    padding-right: 10px;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+.add-logo 
+{
+    fill: white;
+    padding: 0px;
+    width: 20px;
 }

@@ -4,7 +4,7 @@
 }
 
 <head>
-    <link rel="stylesheet" href="~/css/contacts.css"/>
+    <link rel="stylesheet" href="~/css/contacts.css" asp-append-version="true" />
 </head>
 
 <div class="main-div">
@@ -13,15 +13,16 @@
         <table id="contacts-table">
             <thead class="table_header">
                 <tr>
-                    <th scope="col">#</th>
-                    <th scope="col">Prénom</th>
-                    <th scope="col">Nom</th>
-                    <th scope="col">Tel.</th>
-                    <th scope="col">GSM</th>
-                    <th scope="col">Mail</th>
-                    <th scope="col">Adresse</th>
-                    <th scope="col">Code Postal</th>
-                    <th scope="col">Localité</th>
+                    <th id="contacts-table-th1" class="contacts-table-th" scope="col">#</th>
+                    <th id="contacts-table-th2" class="contacts-table-th" scope="col">Prénom</th>
+                    <th id="contacts-table-th3" class="contacts-table-th" scope="col">Nom</th>
+                    <th id="contacts-table-th4" class="contacts-table-th" scope="col">Tel.</th>
+                    <th id="contacts-table-th5" class="contacts-table-th" scope="col">GSM</th>
+                    <th id="contacts-table-th6" class="contacts-table-th" scope="col">Mail</th>
+                    <th id="contacts-table-th7" class="contacts-table-th" scope="col">Adresse</th>
+                    <th id="contacts-table-th8" class="contacts-table-th" scope="col">Code Postal</th>
+                    <th id="contacts-table-th9" class="contacts-table-th" scope="col">Localité</th>
+                    <th id="contacts-table-th10" class="contacts-table-th" scope="col">Actions</th>
                 </tr>
             </thead>
             <tbody>
@@ -29,27 +30,44 @@
                     <td>1</td>
                     <td>Louis</td>
                     <td>Boeckmans</td>
-                    <td>-</td>
-                    <td>0495/72.48.10</td>
+                    <td>+3236 /72.48.10</td>
+                    <td>+32495/72.48.10</td>
                     <td>louis.boeckmans@outlook.com</td>
                     <td>Quai de Gaulle 17/051</td>
                     <td>4020</td>
                     <td>Liege</td>
+                    <td>
+                        <div class="contacts-table-buttons-td-div">
+                            <button class="modify-button">
+                                <img class="modify-logo" src="~/images/modify-icon.svg" alt="Modifier"/>
+                            </button>
+                            <button class="delete-button">
+                                <img class="delete-logo" src="~/images/delete-icon.svg" alt="Supprimer" />
+                            </button>
+                        </div>
+                    </td>
                 </tr>
             </tbody>
         </table>
+        <div id="right-button-div-contact" class="right-button-div">
+            <button class="add-button">
+                <img class="add-logo" src="~/images/add-icon.svg" alt="Ajouter" />
+                Ajouter
+            </button>
+        </div>
     </div>
     <div class="organisations-div">
         <h3> Organisations et entreprises</h3>
         <table id="organisation-table">
             <thead class="table_header">
                 <tr>
-                    <th scope="col">#</th>
-                    <th scope="col">Nom</th>
-                    <th scope="col">Adresse</th>
-                    <th scope="col">Code Postal</th>
-                    <th scope="col">Localite</th>
-                    <th scope="col">N° TVA</th>
+                    <th id="organisation-table-th1" class="organisation-table-th" scope="col">#</th>
+                    <th id="organisation-table-th2" class="organisation-table-th" scope="col">Nom</th>
+                    <th id="organisation-table-th3" class="organisation-table-th" scope="col">Adresse</th>
+                    <th id="organisation-table-th4" class="organisation-table-th" scope="col">Code Postal</th>
+                    <th id="organisation-table-th5" class="organisation-table-th" scope="col">Localite</th>
+                    <th id="organisation-table-th6" class="organisation-table-th" scope="col">N° TVA</th>
+                    <th id="organisation-table-th7" class="organisation-table-th" scope="col">Actions</th>
                 </tr>
             </thead>
             <tbody>
@@ -59,10 +77,26 @@
                     <td>Rue de la Station 44</td>
                     <td>4032</td>
                     <td>Chênée</td>
-                    <td>N° TVA</td>
+                    <td>BE 0425.548.797</td>
+                    <td>
+                        <div class="organisations-table-buttons-td-div">
+                            <button class="modify-button">
+                                <img class="modify-logo" src="~/images/modify-icon.svg" alt="Modifier" />
+                            </button>
+                            <button class="delete-button">
+                                <img class="delete-logo" src="~/images/delete-icon.svg" alt="Modifier" />
+                            </button>
+                        </div>
+                    </td>
                 </tr>
             </tbody>
         </table>
+        <div id="right-button-div-organisation" class="right-button-div">
+            <button class="add-button">
+                <img class="add-logo" src="~/images/add-icon.svg" alt="Ajouter" />
+                Ajouter
+            </button>
+        </div>
     </div>
     
 </div>
