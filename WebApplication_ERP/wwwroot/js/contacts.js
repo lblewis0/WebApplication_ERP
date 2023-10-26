@@ -8,3 +8,26 @@ $(document).ready(function () {
     tableWidth = $("#organisation-table").width();
     $("#right-button-div-organisation").css("width", tableWidth + "px");
 });
+
+function openContactForm()
+{
+    console.log("openContactForm --exe")
+
+    var contactFormMainDiv = $("#contact-form-div");
+    contactFormMainDiv.css("display", "flex");
+
+    var mainDivOverlay = $(".overlay");
+    mainDivOverlay.css("display", "block");
+
+}
+
+function closeContactForm() {
+    console.log("closeContactForm --exe")
+
+    var contactFormMainDiv = $("#contact-form-div");
+    contactFormMainDiv.css("display", "none");
+
+    var mainDivOverlay = $(".overlay");
+    mainDivOverlay.css("display", "none");
+
+}

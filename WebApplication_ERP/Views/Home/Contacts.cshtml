@@ -50,8 +50,8 @@
             </tbody>
         </table>
         <div id="right-button-div-contact" class="right-button-div">
-            <button class="add-button">
-                <img class="add-logo" src="~/images/add-icon.svg" alt="Ajouter" />
+            <button class="add-button" onclick="openContactForm()">
+                <img class="add-logo" src="~/images/add-icon.svg" alt="Ajouter"/>
                 Ajouter
             </button>
         </div>
@@ -99,43 +99,67 @@
         </div>
     </div>
     <div id="contact-form-div">
-        <h3>Contact</h3>
+        <div id="contact-form-title-div">
+            <h3>Ajouter contact</h3>
+        </div>
         <div id="contact-form-top-div">
-            <div id="contact-form-left-div">
+            <div class="contact-form-field-div">
                 <label class="contact-form-label">Prénom :</label>
-                <label class="contact-form-label">Nom :</label>
-                <label class="contact-form-label">Téléphone :</label>
-                <label class="contact-form-label">GSM :</label>
-                <label class="contact-form-label">Mail :</label>
-                <label class="contact-form-label">Rue :</label>
-                <label class="contact-form-label">n° :</label>
-                <label class="contact-form-label">Boite :</label>
-                <label class="contact-form-label">Code Postal :</label>
-                <label class="contact-form-label">Localité :</label>
-            </div>
-            <div id="contact-form-right-div">
                 <input class="contact-form-inputs" type="text" name="prenom" placeholder="Prenom">
+            </div>
+            <div class="contact-form-field-div">
+                <label class="contact-form-label">Nom :</label>
                 <input class="contact-form-inputs" type="text" name="nom" placeholder="Nom">
+            </div>
+            <div class="contact-form-field-div">
+                <label class="contact-form-label">Téléphone :</label>
                 <input class="contact-form-inputs" type="tel" name="numero-telephone" placeholder="000/00.00.00">
+            </div>
+            <div class="contact-form-field-div">
+                <label class="contact-form-label">GSM :</label>
                 <input class="contact-form-inputs" type="tel" name="numero-gsm" placeholder="0000/00.00.00">
+            </div>
+            <div class="contact-form-field-div">
+                <label class="contact-form-label">Mail :</label>
                 <input class="contact-form-inputs" type="email" name="mail" placeholder="adresse@outlook.com">
+            </div>
+            <div class="contact-form-field-div">
+                <label class="contact-form-label">Rue :</label>
                 <input class="contact-form-inputs" type="text" name="rue" placeholder="Rue">
+            </div>
+            <div class="contact-form-field-div">
+                <label class="contact-form-label">n° :</label>
                 <input class="contact-form-inputs" type="number" name="number" placeholder="00">
+            </div>
+            <div class="contact-form-field-div">
+                <label class="contact-form-label">Boite :</label>
                 <input class="contact-form-inputs" type="number" name="boite" placeholder="000">
+            </div>
+            <div class="contact-form-field-div">
+                <label class="contact-form-label">Code Postal :</label>
                 <input class="contact-form-inputs" type="number" name="code-postal" placeholder="0000">
+            </div>
+            <div class="contact-form-field-div">
+                <label class="contact-form-label">Localité :</label>
                 <input class="contact-form-inputs" type="text" name="localite" placeholder="Localité">
             </div>
         </div>
         <div id="contact-form-bottom-div">
             <button class="add-button-form">
+                <img class="add-logo-form" src="~/images/add-icon.svg" alt="Ajouter" />
                 Ajouter
             </button>
-            <button class="cancel-button-form">
+            <button class="check-button-form">
+                <img class="check-logo-form" src="~/images/check-icon.svg" alt="Confirmer" />
+                Confirmer
+            </button>
+            <button class="close-button-form" onclick="closeContactForm()">
+                <img class="close-logo-form" src="~/images/close-icon.svg" alt="Annuler" />
                 Annuler
             </button>
-        </div>
-        
+        </div> 
     </div>
+    <div class="overlay" id="overlayContact"></div>
     
 </div>
 

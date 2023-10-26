@@ -10,6 +10,20 @@ h3
 .main-div
 {
     border: 1px solid grey;
+    position: relative;
+}
+
+.overlay 
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+    display: none;
+    pointer-events: auto;
 }
 
 .contacts-div
@@ -31,12 +45,10 @@ h3
 
 /** CONTACTS **/
 
- 
-{
+.contacts-div {
     border: 1px solid grey;
     border-collapse: collapse;
     border-radius: 10px;
-    
 }
 
 #contacts-table {
@@ -300,7 +312,6 @@ th
     justify-content: flex-start;
     padding-top: 5px;
     font-size: 12px;
-    background-color: lightblue;
 }
 
 #right-button-div-organisation 
@@ -338,45 +349,72 @@ th
 }
 
 /** FORMULAIRE CONTACT **/
-#contact-form-div {
+#contact-form-div 
+{
     border: 1px solid grey;
-    border-radius: 10px;
-    width: 600px;
+    border-radius: 20px;
+    width: 400px;
     max-width: 600px;
-    font-size: 12px; /*
-    display: none;*/
+    font-size: 10px;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    padding: 10px;
+    padding-right: 20px;
+    position: absolute;
+    z-index: 2;
+    top: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: white;
+}
+
+#contact-form-title-div
+{
+    /*border: 1px solid grey;*/
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    color: #044881;
 }
 
 #contact-form-top-div
 {
     display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    gap: 10px;/*
+    border: 1px solid grey;*/
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.contact-form-field-div 
+{
+    display: flex;
     flex-direction: row;
-    border: 1px solid grey;
-}
-
-#contact-form-left-div {
-    display: flex;
-    flex-direction: column;
-    border: 1px solid grey;
-    width: 50%;
-}
-
-#contact-form-right-div {
-    display: flex;
-    flex-direction: column;
-    border: 1px solid grey;
-    width: 50%;
+    align-items: center;
+    justify-content: center;
+    /*border: 1px solid grey;*/
+    width: 100%;
 }
 
 #contact-form-bottom-div
 {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: center;
     align-content: center;
     justify-items: center;
-    padding-left: 150px;
-    padding-right: 150px;
+    gap: 15px;
+    /*border: 1px solid grey;*/
+    width: 100%;
 }
 
 .contact-form-label
@@ -384,10 +422,111 @@ th
     text-align: right;
     padding-right: 10px;
     height: 30px;
+    width: 30%;
+    line-height: 30px;
 }
 
 .contact-form-inputs 
 {
     padding-left: 10px;
-    height: 30px;
+    height: 25px;
+    border-radius: 3px;
+    width: 70%;
+    border: 1px solid grey;
+}
+
+.contact-form-inputs:hover
+{
+    padding-left: 10px;
+    height: 25px;
+    border-radius: 3px;
+    width: 70%;
+    border: 1px solid #3085C3;
+}
+
+.contact-form-inputs:focus
+{
+    padding-left: 10px;
+    height: 25px;
+    border-radius: 3px;
+    width: 70%;
+    border: 1px solid #3085C3;
+    box-shadow: 0 0 5px #3085C3;
+    outline: none;
+}
+
+.add-button-form
+{
+    background: green;
+    cursor: pointer;
+    padding: 0px;
+    border-radius: 3px 3px 3px 3px;
+    border: 0.5px solid grey;
+    color: white;
+    padding-right: 10px;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    width: 80px;
+    height: 25px;
+}
+
+.add-logo-form 
+{
+    fill: white;
+    padding: 0px;
+    width: 15px;
+    margin-right: 5px;
+}
+
+.check-button-form {
+    background: yellow;
+    cursor: pointer;
+    padding: 0px;
+    border-radius: 3px 3px 3px 3px;
+    border: 0.5px solid grey;
+    color: black;
+    padding-right: 10px;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    width: 80px;
+    height: 25px;
+}
+
+.check-logo-form 
+{
+    fill: lightgrey;
+    padding: 0px;
+    width: 15px;
+    margin-right: 5px;
+}
+
+.close-button-form {
+    background: red;
+    cursor: pointer;
+    padding: 0px;
+    border-radius: 3px 3px 3px 3px;
+    border: 0.5px solid grey;
+    color: white;
+    padding-right: 10px;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    width: 80px;
+    height: 25px;
+}
+
+.close-logo-form 
+{
+    fill: white;
+    padding: 0px;
+    width: 15px;
+    margin-right: 5px;
 }
