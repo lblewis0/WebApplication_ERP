@@ -3,7 +3,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <Name>WebApplication_ERP_DAL</Name>
+    <Name>WebApplication_ERP-BD</Name>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectVersion>4.1</ProjectVersion>
     <ProjectGuid>{4e3aea8a-b17d-44bb-b72b-aa0e5285f658}</ProjectGuid>
@@ -62,7 +62,7 @@
   <ItemGroup>
     <Build Include="Tables\Person.sql" />
     <Build Include="Tables\Organisations.sql" />
-    <Build Include="Tables\Adress.sql" />
+    <Build Include="Tables\Address.sql" />
     <Build Include="Tables\Order_Product.sql" />
     <Build Include="Tables\Orders.sql" />
     <Build Include="Tables\Person_Status.sql" />
@@ -72,6 +72,6 @@
     <PostDeploy Include="Scripts\Script.PostDeploymentAdressPerson.sql" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="WebApplication_ERP-DAL.publish.xml" />
+    <None Include="WebApplication_ERP-BD.publish.xml" />
   </ItemGroup>
 </Project>

@@ -5,7 +5,9 @@ VisualStudioVersion = 17.6.33723.286
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApplication_ERP", "WebApplication_ERP\WebApplication_ERP.csproj", "{D531DD55-6087-4446-BCBA-35CA5A60EBF6}"
 EndProject
-Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "WebApplication_ERP-DAL", "WebApplication_ERP-DAL\WebApplication_ERP-DAL.sqlproj", "{4E3AEA8A-B17D-44BB-B72B-AA0E5285F658}"
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "WebApplication_ERP-BD", "WebApplication_ERP-BD\WebApplication_ERP-BD.sqlproj", "{4E3AEA8A-B17D-44BB-B72B-AA0E5285F658}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApplication_ERP-DAL", "WebApplication_ERP-DAL\WebApplication_ERP-DAL.csproj", "{0295E546-9745-436B-B90A-AA641B2CF854}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,6 +25,10 @@ Global
 		{4E3AEA8A-B17D-44BB-B72B-AA0E5285F658}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4E3AEA8A-B17D-44BB-B72B-AA0E5285F658}.Release|Any CPU.Build.0 = Release|Any CPU
 		{4E3AEA8A-B17D-44BB-B72B-AA0E5285F658}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{0295E546-9745-436B-B90A-AA641B2CF854}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0295E546-9745-436B-B90A-AA641B2CF854}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0295E546-9745-436B-B90A-AA641B2CF854}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0295E546-9745-436B-B90A-AA641B2CF854}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

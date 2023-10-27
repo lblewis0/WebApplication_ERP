@@ -1,7 +1,10 @@
-﻿
+﻿@model List<WebApplication_ERP.Models.DTOs.PersonAddressDTO_Contact>
+
 @{
     ViewData["Title"] = "Contacts";
 }
+
+
 
 <head>
     <link rel="stylesheet" href="~/css/contacts.css" asp-append-version="true" />
@@ -26,7 +29,31 @@
                 </tr>
             </thead>
             <tbody>
-                <tr>
+                @foreach(var item in Model)
+                {
+                    <tr>
+                        <td>@item.Id</td>
+                        <td>@item.Firstname</td>
+                        <td>@item.Lastname</td>
+                        <td>@item.Phone</td>
+                        <td>@item.Cellphone</td>
+                        <td>@item.Mail</td>
+                        <td>@item.Formated_Address</td>
+                        <td>@item.PostalCode</td>
+                        <td>@item.Locality</td>
+                        <td>
+                            <div class="contacts-table-buttons-td-div">
+                                <button class="modify-button">
+                                    <img class="modify-logo" src="~/images/modify-icon.svg" alt="Modifier" />
+                                </button>
+                                <button class="delete-button">
+                                    <img class="delete-logo" src="~/images/delete-icon.svg" alt="Supprimer" />
+                                </button>
+                            </div>
+                        </td>
+                    </tr>
+                }
+                @*<tr>
                     <td>1</td>
                     <td>Louis</td>
                     <td>Boeckmans</td>
@@ -46,7 +73,7 @@
                             </button>
                         </div>
                     </td>
-                </tr>
+                </tr>*@
             </tbody>
         </table>
         <div id="right-button-div-contact" class="right-button-div">

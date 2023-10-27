@@ -10,7 +10,7 @@ Modèle de script de post-déploiement
 --------------------------------------------------------------------------------------
 */
 
-INSERT INTO [dbo].[Adress] ([Id], [Street], [Number], [Box], [PostalCode], [Locality])
+INSERT INTO [dbo].[Address] ([Id], [Street], [Number], [Box], [PostalCode], [Locality])
 VALUES
   (1, 'Rue de la Paix', 123, NULL, 1000, 'Bruxelles'),
   (2, 'Avenue des Roses', 456, 051, 2000, 'Paris'),
@@ -23,7 +23,7 @@ VALUES
   (9, 'Via Roma', 14, NULL, 00185, 'Rome'),
   (10, 'Passeig de Gràcia', 98, 03, 08008, 'Barcelona');
 
-INSERT INTO [dbo].[Person] ([Id], [Firstname], [Lastname], [id_Adress], [Email], [Phone], [Cellphone])
+INSERT INTO [dbo].[Person] ([Id], [Firstname], [Lastname], [id_Address], [Email], [Phone], [Cellphone])
 VALUES
   (1, 'John', 'Doe', 1, 'john.doe@example.com', '555-1234', NULL),
   (2, 'Jane', 'Smith', 2, 'jane.smith@example.com', NULL, '555-5678'),

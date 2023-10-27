@@ -9,6 +9,21 @@ $(document).ready(function () {
     $("#right-button-div-organisation").css("width", tableWidth + "px");
 });
 
+//$(document).ready(function () {
+//    $.ajax({
+//        url: '/Contact/GetPersons',
+//        type: 'GET',
+//        dataType: 'json',
+//        success: function (data) {
+
+//            console.log(data);
+//        }
+//        error: function (error) {
+//            console.error('Erreur lors de la requête AJAX : ' + error.statusText);
+//        }
+//    })
+//})
+
 function openContactForm()
 {
     console.log("openContactForm --exe")
