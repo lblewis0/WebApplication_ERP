@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Extensions.Configuration;
+using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Linq;
@@ -15,22 +16,37 @@ namespace WebApplication_ERP_DAL.Services
 
         private readonly SqlConnection _connection;
 
-        public AddressDbService(SqlConnection connection)
+        //public AddressDbService(SqlConnection connection)
+        //{
+        //    _connection = connection;
+        //}
+
+        public AddressDbService(IConfiguration config)
         {
-            _connection = connection;
+            _connection = new SqlConnection(config.GetConnectionString("default"));
         }
 
         protected Address Mapper(SqlDataReader reader)
         {
-            return new Address
+            var address =  new Address
             {
                 Id = (int)reader["Id"],
                 Street = (string)reader["Street"],
                 Number = (int)reader["Number"],
-                Box = (int)reader["Box"],
                 PostalCode = (int)reader["PostalCode"],
                 Locality = (string)reader["Locality"]
             };
+
+            if (!reader.IsDBNull(reader.GetOrdinal("Box")))
+            {
+                address.Box = (string)reader["Box"];
+            }
+            else
+            {
+                address.Box = null;
+            }
+
+            return address;
         }
 
 

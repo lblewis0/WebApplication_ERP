@@ -14,7 +14,7 @@ namespace WebApplication_ERP_DAL.Models
 
         public int Number { get; set; }
 
-        public int Box { get; set; }
+        public string Box { get; set; }
 
         public int PostalCode { get; set; }
 

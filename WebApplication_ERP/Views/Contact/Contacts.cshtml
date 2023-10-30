@@ -53,27 +53,6 @@
                         </td>
                     </tr>
                 }
-                @*<tr>
-                    <td>1</td>
-                    <td>Louis</td>
-                    <td>Boeckmans</td>
-                    <td>+3236 /72.48.10</td>
-                    <td>+32495/72.48.10</td>
-                    <td>louis.boeckmans@outlook.com</td>
-                    <td>Quai de Gaulle 17/051</td>
-                    <td>4020</td>
-                    <td>Liege</td>
-                    <td>
-                        <div class="contacts-table-buttons-td-div">
-                            <button class="modify-button">
-                                <img class="modify-logo" src="~/images/modify-icon.svg" alt="Modifier"/>
-                            </button>
-                            <button class="delete-button">
-                                <img class="delete-logo" src="~/images/delete-icon.svg" alt="Supprimer" />
-                            </button>
-                        </div>
-                    </td>
-                </tr>*@
             </tbody>
         </table>
         <div id="right-button-div-contact" class="right-button-div">
@@ -119,8 +98,8 @@
             </tbody>
         </table>
         <div id="right-button-div-organisation" class="right-button-div">
-            <button class="add-button">
-                <img class="add-logo" src="~/images/add-icon.svg" alt="Ajouter" />
+            <button class="add-button" onclick="openContactForm()">
+                <img class="add-logo" src="~/images/add-icon.svg" alt="Ajouter"/>
                 Ajouter
             </button>
         </div>
@@ -132,44 +111,99 @@
         <div id="contact-form-top-div">
             <div class="contact-form-field-div">
                 <label class="contact-form-label">Prénom :</label>
-                <input class="contact-form-inputs" type="text" name="prenom" placeholder="Prenom">
+                <input id="prenom-input" class="contact-form-inputs" type="text" name="prenom" placeholder="Prenom">
+                <img id="validate-logo-form-prenom" class="validate-logo-form" src="~/images/cancelCircle-icon.svg" alt="LogoValidation" />
+            </div>
+            <div id="contact-form-requirement-div-prenom" class="contact-form-requirement-div">
             </div>
             <div class="contact-form-field-div">
                 <label class="contact-form-label">Nom :</label>
-                <input class="contact-form-inputs" type="text" name="nom" placeholder="Nom">
+                <input id="nom-input" class="contact-form-inputs" type="text" name="nom" placeholder="Nom">
+                <img id="validate-logo-form-nom" class="validate-logo-form" src="~/images/cancelCircle-icon.svg" alt="LogoValidation" />
+            </div>
+            <div id="contact-form-requirement-div-nom" class="contact-form-requirement-div">
             </div>
             <div class="contact-form-field-div">
                 <label class="contact-form-label">Téléphone :</label>
-                <input class="contact-form-inputs" type="tel" name="numero-telephone" placeholder="000/00.00.00">
+                <input id="numero-telephone-input" class="contact-form-inputs" type="tel" name="numero-telephone" placeholder="000/00.00.00">
+                <img id="validate-logo-form-numero-telephone" class="validate-logo-form" src="~/images/cancelCircle-icon.svg" alt="LogoValidation" />
+            </div>
+            <div id="contact-form-requirement-div-numero-telephone" class="contact-form-requirement-div">
+                <label class="contact-form-requirement-label">Le numéro de téléphone :</label>
+                <label class="contact-form-requirement-label">Un numéro de téléphone ou gsm minimum est requis</label>
+                <label class="contact-form-requirement-label">Ne doit contenir que des chiffres</label>
+                <label class="contact-form-requirement-label">9 chiffres requis</label>
             </div>
             <div class="contact-form-field-div">
                 <label class="contact-form-label">GSM :</label>
-                <input class="contact-form-inputs" type="tel" name="numero-gsm" placeholder="0000/00.00.00">
+                <input id="numero-gsm-input" class="contact-form-inputs" type="tel" name="numero-gsm" placeholder="0000/00.00.00">
+                <img id="validate-logo-form-numero-gsm" class="validate-logo-form" src="~/images/cancelCircle-icon.svg" alt="LogoValidation" />
+            </div>
+            <div id="contact-form-requirement-div-numero-gsm" class="contact-form-requirement-div">
+                <label class="contact-form-requirement-label">Le numéro de gsm :</label>
+                <label class="contact-form-requirement-label">Un numéro de téléphone ou gsm minimum est requis</label>
+                <label class="contact-form-requirement-label">Ne doit contenir que des chiffres</label>
+                <label class="contact-form-requirement-label">10 chiffres requis</label>
             </div>
             <div class="contact-form-field-div">
                 <label class="contact-form-label">Mail :</label>
-                <input class="contact-form-inputs" type="email" name="mail" placeholder="adresse@outlook.com">
+                <input id="email-input" class="contact-form-inputs" type="email" name="mail" placeholder="adresse@outlook.com">
+                <img id="validate-logo-form-mail" class="validate-logo-form" src="~/images/cancelCircle-icon.svg" alt="LogoValidation" />
+            </div>
+            <div class="contact-form-requirement-div">
+                <label class="contact-form-requirement-label">L'adresse mail :</label>
+                <label class="contact-form-requirement-label">Est requise</label>
+                <label class="contact-form-requirement-label">Adresse mail invalide</label>
             </div>
             <div class="contact-form-field-div">
                 <label class="contact-form-label">Rue :</label>
-                <input class="contact-form-inputs" type="text" name="rue" placeholder="Rue">
+                <input id="rue-input" class="contact-form-inputs" type="text" name="rue" placeholder="Rue">
+                <img id="validate-logo-form-rue" class="validate-logo-form" src="~/images/cancelCircle-icon.svg" alt="LogoValidation" />
+            </div>
+            <div class="contact-form-requirement-div">
+                <label class="contact-form-requirement-label">Le nom de la rue :</label>
+                <label class="contact-form-requirement-label">Est requis</label>
+                <label class="contact-form-requirement-label">Ne doit pas contenir de caractères spéciaux $&/\:._()</label>
+                <label class="contact-form-requirement-label">Ne doit pas contenir de chiffres</label>
             </div>
             <div class="contact-form-field-div">
                 <label class="contact-form-label">n° :</label>
-                <input class="contact-form-inputs" type="number" name="number" placeholder="00">
+                <input id="number-input" class="contact-form-inputs" type="number" name="number" placeholder="00">
+                <img id="validate-logo-form-number" class="validate-logo-form" src="~/images/cancelCircle-icon.svg" alt="LogoValidation" />
+            </div>
+            <div class="contact-form-requirement-div">
+                <label class="contact-form-requirement-label">Le numéro de la rue :</label>
+                <label class="contact-form-requirement-label">Est requis</label>
+                <label class="contact-form-requirement-label">Ne doit contenir que des chiffres</label>
             </div>
             <div class="contact-form-field-div">
                 <label class="contact-form-label">Boite :</label>
-                <input class="contact-form-inputs" type="number" name="boite" placeholder="000">
+                <input id="boite-input" class="contact-form-inputs" type="number" name="boite" placeholder="000">
+                <img id="validate-logo-form-boite" class="validate-logo-form" src="~/images/cancelCircle-icon.svg" alt="LogoValidation" />
             </div>
             <div class="contact-form-field-div">
                 <label class="contact-form-label">Code Postal :</label>
-                <input class="contact-form-inputs" type="number" name="code-postal" placeholder="0000">
+                <input id="code-postal-input" class="contact-form-inputs" type="number" name="code-postal" placeholder="0000">
+                <img id="validate-logo-form-code-postal" class="validate-logo-form" src="~/images/cancelCircle-icon.svg" alt="LogoValidation" />
+            </div>
+            <div class="contact-form-requirement-div">
+                <label class="contact-form-requirement-label">Le code postal :</label>
+                <label class="contact-form-requirement-label">Est requis</label>
+                <label class="contact-form-requirement-label">Ne doit contenir que des chiffres</label>
+                <label class="contact-form-requirement-label">4 chiffres requis</label>
             </div>
             <div class="contact-form-field-div">
                 <label class="contact-form-label">Localité :</label>
-                <input class="contact-form-inputs" type="text" name="localite" placeholder="Localité">
+                <input id="localite-input" class="contact-form-inputs" type="text" name="localite" placeholder="Localité">
+                <img id="validate-logo-form-localite" class="validate-logo-form" src="~/images/cancelCircle-icon.svg" alt="LogoValidation" />
             </div>
+            <div class="contact-form-requirement-div">
+                <label class="contact-form-requirement-label">Le nom de la localité :</label>
+                <label class="contact-form-requirement-label">Est requis</label>
+                <label class="contact-form-requirement-label">Ne doit pas contenir de caractères spéciaux $&/\:._()</label>
+                <label class="contact-form-requirement-label">Ne doit pas contenir de chiffres</label>
+            </div>
+
         </div>
         <div id="contact-form-bottom-div">
             <button class="add-button-form">

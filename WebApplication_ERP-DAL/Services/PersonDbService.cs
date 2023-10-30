@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Extensions.Configuration;
+using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Linq;
@@ -16,31 +17,48 @@ namespace WebApplication_ERP_DAL.Services
 
         private readonly SqlConnection _connection;
 
-        //public AddressDbService(IConfiguration config)
+        //public PersonDbService(SqlConnection connection)
         //{
-        //    connectionString = config.GetConnectionString("default");
-        //    _connection = new SqlConnection(connectionString);
+        //    _connection = connection;
         //}
 
-        public PersonDbService(SqlConnection connection)
+        public PersonDbService(IConfiguration config)
         {
-            _connection = connection;
+            _connection = new SqlConnection(config.GetConnectionString("default"));
         }
 
         protected Person Mapper(SqlDataReader reader)
         {
-            return new Person
+            var person = new Person
             {
                 Id = (int)reader["Id"],
                 Firstname = (string)reader["Firstname"],
                 Lastname = (string)reader["Lastname"],
                 Id_Address = (int)reader["id_Address"],
-                Mail = (string)reader["Email"],
-                Phone = (int)reader["Phone"],
-                Cellphone = (int)reader["Cellphone"]
+                Mail = (string)reader["Email"]
             };
-        }
 
+            if (!reader.IsDBNull(reader.GetOrdinal("Phone")))
+            {
+                person.Phone = (string)reader["Phone"];
+            }
+            else
+            {
+                person.Phone = null;
+            }
+
+            if (!reader.IsDBNull(reader.GetOrdinal("Cellphone")))
+            {
+                person.Cellphone = (string)reader["Cellphone"];
+            }
+            else
+            {
+                person.Cellphone = null;
+            }
+
+            return person;
+
+        }
 
         public void Create(Person person)
         {

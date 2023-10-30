@@ -10,9 +10,9 @@ namespace WebApplication_ERP.Models.DTOs
 
         public string Lastname { get; set; }
 
-        public int Phone { get; set; }
+        public string Phone { get; set; }
 
-        public int Cellphone { get; set; }
+        public string Cellphone { get; set; }
 
         public string Mail { get; set; }
 
@@ -20,7 +20,7 @@ namespace WebApplication_ERP.Models.DTOs
 
         public int Number { get; set; }
 
-        public int Box { get; set; }
+        public string Box { get; set; }
 
         public int PostalCode { get; set; }
 

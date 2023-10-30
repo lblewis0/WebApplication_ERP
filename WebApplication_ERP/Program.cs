@@ -16,11 +16,11 @@ builder.Services.AddScoped<IAddressService, AddressDbService>();
 
 builder.Services.AddScoped<IPersonService, PersonDbService>();
 
-builder.Services.AddHttpContextAccessor();
+//builder.Services.AddHttpContextAccessor();
 
-builder.Services.AddDistributedMemoryCache();
+//builder.Services.AddDistributedMemoryCache();
 
-builder.Services.AddSession();
+//builder.Services.AddSession();
 
 var app = builder.Build();
 
@@ -36,11 +36,11 @@ app.UseHttpsRedirection();
 app.UseStaticFiles();
 
 //Modifications 2
-app.UseSession();
+//app.UseSession();
 
-app.UseRouting();
+//app.UseRouting();
 
-app.UseAuthorization();
+//app.UseAuthorization();
 
 app.MapControllerRoute(
     name: "default",

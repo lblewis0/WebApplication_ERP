@@ -18,9 +18,9 @@ namespace WebApplication_ERP_DAL.Models
 
         public string Mail { get; set; }
 
-        public int Phone { get; set; }
+        public string Phone { get; set; }
 
-        public int Cellphone { get; set; }
+        public string Cellphone { get; set; }
 
     }
 }

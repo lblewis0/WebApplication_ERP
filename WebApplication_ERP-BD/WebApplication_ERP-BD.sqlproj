@@ -7,7 +7,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectVersion>4.1</ProjectVersion>
     <ProjectGuid>{4e3aea8a-b17d-44bb-b72b-aa0e5285f658}</ProjectGuid>
-    <DSP>Microsoft.Data.Tools.Schema.Sql.Sql160DatabaseSchemaProvider</DSP>
+    <DSP>Microsoft.Data.Tools.Schema.Sql.Sql150DatabaseSchemaProvider</DSP>
     <OutputType>Database</OutputType>
     <RootPath>
     </RootPath>
@@ -70,8 +70,5 @@
   </ItemGroup>
   <ItemGroup>
     <PostDeploy Include="Scripts\Script.PostDeploymentAdressPerson.sql" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="WebApplication_ERP-BD.publish.xml" />
   </ItemGroup>
 </Project>
